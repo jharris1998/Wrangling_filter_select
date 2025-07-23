@@ -21,6 +21,7 @@ data(movies)
 
 It's always a good idea to do some recon work first. What do the data look like? How many observations and variables do we have? What are the variable names?
 
+movies from ranging from the early 1900s-2000s. We have 58,788 observations and 24 variables. 
 
 ```{r}
 # View() opens the data in another window. 'head(movies)' will show the first few rows.
@@ -156,14 +157,24 @@ movies %>%
 filter(year >= 2000 & Action == 1) %>%
 drop_na(budget) %>%
 select(title, rating, budget)
-
-# Why doesn't the following code work?
-movies %>%
-select(title, rating, budget) %>%
-filter(year >= 2000) %>%
-drop_na(budget) 
 ```
 
+# Why doesn't the following code work?
+```{r} 
+movies %>%
+ filter(year >= 2000) %>%
+ select(title, rating, budget) %>%
+ drop_na(budget) 
+```
+
+```{r}
+movies %>%
+ filter(year >= 2000) %>%
+ select(title, rating, budget) %>%
+ drop_na(budget) 
+```
+
+the code doesn't work because it tries filter on the year column after that column has been removed by select() so the year no longer exists when filtering applied. 
 
 ## Arrange
 
