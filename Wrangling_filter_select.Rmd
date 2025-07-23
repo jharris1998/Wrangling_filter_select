@@ -14,7 +14,6 @@ We need to load libraries and read the data into R first.
 library(tidyverse)
 library(ggplot2movies)
 library(ggformula)
-
 # This loads the data from the ggplot2movies package
 data(movies)
 ```
