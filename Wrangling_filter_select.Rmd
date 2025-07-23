@@ -21,7 +21,7 @@ data(movies)
 
 It's always a good idea to do some recon work first. What do the data look like? How many observations and variables do we have? What are the variable names?
 
-movies from ranging from the early 1900s-2000s. We have 58,788 observations and 24 variables. 
+movies from ranging from the early 1900s-2000s. We have 58,788 observations and 24 variables. The variable names are movies_2000, movies_modern, and movies. 
 
 ```{r}
 # View() opens the data in another window. 'head(movies)' will show the first few rows.
