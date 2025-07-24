@@ -232,7 +232,9 @@ See if you can answer these questions:
 4. What is the highest budget for a movie that is an Animation or Comedy with at least 100 votes?
 
 ```{r}
-
+library(dplyr)
+movies %>%
+filter((Animation == 1| Comedy == 1),votes >=100)%>% arrange(desc(budget)) %>% slice(1)  
 ```
 
 5. Is your favorite movie in the data set? What other questions could you ask or answer using `filter()`, `select()`, and `arrange()`?
