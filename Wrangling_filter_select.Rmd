@@ -21,8 +21,6 @@ data(movies)
 
 It's always a good idea to do some recon work first. What do the data look like? How many observations and variables do we have? What are the variable names?
 
-movies from ranging from the early 1900s-2000s. We have 58,788 observations and 24 variables. The variable names are movies_2000, movies_modern, and movies. 
-
 ```{r}
 # View() opens the data in another window. 'head(movies)' will show the first few rows.
 #View(movies)
@@ -203,6 +201,10 @@ movies_2000 %>%
 # Using the original 'movies' data, what is the longest movie? What is the oldest movie?
 ```
 
+```{r}
+movies1995 <-movies %>% filter(year == 1995)
+movies1995
+```
 
 
 ## Scavenger Hunt
@@ -212,7 +214,9 @@ See if you can answer these questions:
 1. How many movies were released in 1995?
 
 ```{r}
-
+movies_2000 %>%
+ desc(length,year)%>%
+ slice(1)
 ```
 
 2. Which Comedies with an MPAA rating, over 120 minutes have a rating above 8?
@@ -233,7 +237,7 @@ See if you can answer these questions:
 
 ```
 
-5. Is your favorite movie in the dataset? What other questions could you ask or answer using `filter()`, `select()`, and `arrange()`?
+5. Is your favorite movie in the data set? What other questions could you ask or answer using `filter()`, `select()`, and `arrange()`?
 
 ```{r}
 
