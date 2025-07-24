@@ -201,12 +201,6 @@ movies_2000 %>%
 # Using the original 'movies' data, what is the longest movie? What is the oldest movie?
 ```
 
-```{r}
-movies1995 <-movies %>% filter(year == 1995)
-movies1995
-```
-
-
 ## Scavenger Hunt
 
 See if you can answer these questions:
@@ -214,7 +208,8 @@ See if you can answer these questions:
 1. How many movies were released in 1995?
 
 ```{r}
-
+movies1995 <-movies %>% filter(year == 1995)
+movies1995
 ```
 
 2. Which Comedies with an MPAA rating, over 120 minutes have a rating above 8?
