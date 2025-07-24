@@ -214,9 +214,7 @@ See if you can answer these questions:
 1. How many movies were released in 1995?
 
 ```{r}
-movies_2000 %>%
- desc(length,year)%>%
- slice(1)
+
 ```
 
 2. Which Comedies with an MPAA rating, over 120 minutes have a rating above 8?
