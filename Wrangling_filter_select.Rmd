@@ -241,7 +241,9 @@ filter((Animation == 1| Comedy == 1),votes >=100)%>% arrange(desc(budget)) %>% s
 5. Is your favorite movie in the data set? What other questions could you ask or answer using `filter()`, `select()`, and `arrange()`?
 
 ```{r}
-
+Favorite <- movies %>% 
+  filter(str_detect(title, "Scream"), Action == 1)
+Favorite
 ```
 
 
